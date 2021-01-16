@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthGuardService } from '../auth-guard.service';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -12,9 +10,8 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
 
   constructor(
-    public router: Router,
-    public auth: AuthService,
-    public authG: AuthGuardService
+    private router: Router,
+    private auth: AuthService
   ) {
 
   }

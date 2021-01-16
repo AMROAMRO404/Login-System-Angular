@@ -1,6 +1,11 @@
 <div style="padding:100px">
     <form #logInForm='ngForm' (ngSubmit)='logIn()'>
         <h2>Login Page</h2>
+        <div style="padding: 15px;">
+            <p>Test this log-in system .. </p>
+            <p>Admin email is : amro@gmail.com, passward is : 123</p>
+        </div>
+
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" required name="email">
@@ -9,6 +14,6 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password" required name="password">
         </div>
-        <button [disabled]="!logInForm.valid" type="submit" class="btn btn-primary">Submit</button>
+        <button [disabled]="!logInForm.valid" type="submit" class="btn btn-primary">Log in</button>
     </form>
 </div>
