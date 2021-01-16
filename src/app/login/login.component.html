@@ -1,0 +1,14 @@
+<div style="padding:100px">
+    <form #logInForm='ngForm' (ngSubmit)='logIn()'>
+        <h2>Login Page</h2>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" required name="email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password" required name="password">
+        </div>
+        <button [disabled]="!logInForm.valid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
